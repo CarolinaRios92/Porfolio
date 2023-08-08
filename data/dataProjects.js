@@ -24,13 +24,13 @@ export const actualProjects = [
             technologies: [
                 "Next",
                 "MongoDb",
-                "Styled_Components",
                 "MercadoPago",
                 "React",
                 "JavaScript",
                 "VSCode",
                 "HTML5",
-                "GitHub"
+                "GitHub",
+                "Styled_Components",
             ],
             repositorie: "https://github.com/CarolinaRios92/Ecommerce-Malaika-Front",
             deploy: "https://ecommerce-malaika-front.vercel.app"
