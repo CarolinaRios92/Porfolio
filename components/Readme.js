@@ -1,7 +1,7 @@
-export const AboutMe = () => {
+export const Readme = () => {
     return (
-        <section id="about-me">
-            <h3>Sobre Mi</h3>
+        <section id="readme" className="w-3/5 m-auto pt-10">
+            <h3 className="text-2xl font-medium pb-3">_README</h3>
             <p>
                 Soy Full Stack Developer con formación como Diseñadora Web. 
                 Siempre me intereso mucho la tecnología, constantemente me gusta pensar en nuevas aplicaciones 
