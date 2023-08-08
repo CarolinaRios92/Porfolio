@@ -1,12 +1,12 @@
 export const Header = () => {
     return (
-        <section>
+        <section className="flex justify-between py-5 px-14">
             <p>Bienvenido! Soy Carolina Ríos!</p>
-            <nav>
-                <a href="#about-me">Sobre mi</a>
-                <a href="#proyects">Proyectos</a>
-                <a>Tecnologias</a>
-                <a>Contacto</a>
+            <nav className="flex gap-5">
+                <a href="#about-me">README</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#technologies">Tecnologias</a>
+                <a href="#contact">Contacto</a>
             </nav>
         </section>
     )

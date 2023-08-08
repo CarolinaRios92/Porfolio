@@ -140,9 +140,13 @@ export const Projects = () => {
         }
     ]
     return (
-        <section id="projects">
+        <section id="projects" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#E5989B" fill-opacity="1" d="M0,224L480,96L960,224L1440,160L1440,320L960,320L480,320L0,320Z"></path>
+            </svg>
+            <div className="bg-[#E5989B]"> 
             <h3>Proyectos</h3>
-            <div>
+            <div >
                 {actualProyects.length > 0 && (
                     actualProyects.map(proyect => (
                         <div key={proyect.id}>
@@ -151,9 +155,13 @@ export const Projects = () => {
                         </div>
                     ))
                 )}
-                
             </div>
-            
+           
+            </div>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#E5989B" fill-opacity="1" d="M0,96L480,192L960,64L1440,96L1440,0L960,0L480,0L0,0Z">
+                    </path>
+                </svg>
         </section>
     )
 }
