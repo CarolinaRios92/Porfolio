@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation"
 
 export const Inicio = () => {
     return (
-        <section className="flex justify-center items-center content-start gap-16">
+        <section className="flex justify-center items-center content-start gap-20 py-20 background-image" >
             <div className="flex flex-col gap-3">
                 <h1 className="text-5xl font-bold">Leandra Carolina Ríos</h1>
                 <h2 className="text-lg">Hola! Soy 
