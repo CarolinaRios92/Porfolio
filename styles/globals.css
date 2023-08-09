@@ -6,3 +6,10 @@
     background-image: url("/fondo.jpg");
     background-size: cover;
 }
+
+.selected {
+    background-color: white;
+    color: #9381ff;
+    font-weight: 600;
+    font-size: large;
+}
