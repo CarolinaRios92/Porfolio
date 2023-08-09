@@ -14,7 +14,7 @@ export const Projects = () => {
     }
     console.log(project)
     return (
-        <section id="projects" className="pt-0 mt-0">
+        <section className="pt-0 mt-0">
             
             <svg className="mb-0 pt-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#9381ff" fill-opacity="1" d="M0,224L48,229.3C96,235,192,245,288,245.3C384,245,480,235,576,208C672,181,768,139,864,122.7C960,107,1056,117,1152,144C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -23,7 +23,7 @@ export const Projects = () => {
 
             <div className="bg-primary mt-0 pt-0 border-none"> 
                 <div className="w-3/5 m-auto pt-10">
-                    <h3 className="text-3xl font-medium pb-3 text-white">
+                    <h3 id="projects" className="text-3xl font-medium pb-3 text-white">
                         _Proyectos
                     </h3>
 
