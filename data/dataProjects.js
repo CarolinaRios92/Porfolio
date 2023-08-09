@@ -152,7 +152,14 @@ export const TecnologiesLogotype = {
     MongoDb: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     Next: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     Tailwind: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-    Styled_Components: "/images/Logos/styled-components.png",
-    MercadoPago: "/images/Logos/mercado-pago.png",
-    AWS_S3: "/images/Logos/aws.png",
+    Styled_Components: "/images/Icons/styled-components.png",
+    MercadoPago: "/images/Icons/mercado-pago.png",
+    AWS_S3: "/images/Icons/aws.png",
+    Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    Firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    Vercel: "/images/Icons/vercel.svg",
+    Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    Slack: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+    Discord: "/images/Icons/discord.svg",
+    Trello: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
 }
