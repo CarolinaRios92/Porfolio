@@ -22,7 +22,7 @@ export default function Projects(){
             </svg>
 
             <div className="bg-primary mt-0 pt-0 border-none"> 
-                <div className="md:w-4/6 w-5/6 m-auto pt-10">
+                <div className="lg:w-4/6 w-5/6 m-auto pt-10">
                     <h3 id="projects" className="text-3xl font-medium pb-3 text-white">
                         _Proyectos
                     </h3>
