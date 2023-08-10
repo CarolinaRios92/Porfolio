@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export const Contact = () => {
     const [input, setInput] = useState({
@@ -31,10 +33,41 @@ export const Contact = () => {
         return errors;
     }
 
+    const handleSubmit = async(e) => {
+        e.preventDefault()
+        const newMessage = {
+            name: input.name.trim(),
+            email: input.email,
+            subject: input.subject.trim(),
+            message: input.message.trim(),
+        }
+        setInput({
+                name: "",
+                email: "",
+                subject: "",
+                message: ""
+        })
+        try {
+            await axios.post("https://submit-form.com/R14WI3qY", newMessage)
+            .then(response => {
+                if(response.statusText === "OK"){
+                Swal.fire({
+                    title: "Muchas gracias por el mensaje, me comunicare lo antes posible contigo",
+                    icon: "success",
+                })
+            }
+            })
+        } catch (error) {
+            console.log(error.message)            
+        }
+    }
+
     return (
         <div id="contact" className="w-3/5 m-auto mt-10 bg-third p-7">
             <h3 className="text-3xl font-medium pb-2">_Contáctame</h3>
-            <form className="flex flex-col">
+            <form 
+                className="flex flex-col"
+                onSubmit={handleSubmit}>
                 <div className="flex gap-3 py-3">
                     <div className="basis-1/2">
                         <div className="flex flex-col">
@@ -43,7 +76,7 @@ export const Contact = () => {
                                 type="text"
                                 id="name"
                                 placeholder="Nombre..."
-                                className="p-2 rounded-md basis-4/5"
+                                 className="p-2 rounded-md basis-4/5"
                                 name="name"
                                 required
                                 value={input.name}
