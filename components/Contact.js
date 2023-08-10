@@ -63,12 +63,12 @@ export const Contact = () => {
     }
 
     return (
-        <div id="contact" className="w-3/5 m-auto my-10 bg-third p-7 ">
+        <div id="contact" className="md:w-3/5 w-4/5 m-auto my-10 bg-third p-7 ">
             <h3 className="text-3xl font-medium pb-2">_Contáctame</h3>
             <form 
                 className="flex flex-col"
                 onSubmit={handleSubmit}>
-                <div className="flex gap-3 py-3">
+                <div className="flex flex-col md:flex-row gap-3 py-3">
                     <div className="basis-1/2">
                         <div className="flex flex-col">
                             <label htmlFor="name" className="pb-1">Nombre: </label>

@@ -3,10 +3,10 @@ import { TypeAnimation } from "react-type-animation"
 
 export const Inicio = () => {
     return (
-        <section className="flex justify-center items-center content-start gap-20 py-28 background-image" >
+        <section className="flex lg:flex-row justify-center items-center content-start gap-20 py-28 background-image flex-col " >
             <div className="flex flex-col gap-3">
-                <h1 className="text-5xl font-bold">Leandra Carolina Ríos</h1>
-                <h2 className="text-2xl">Hola! Soy 
+                <h1 className="text-5xl font-bold m-auto lg:m-0">Leandra Carolina Ríos</h1>
+                <h2 className="text-2xl m-auto lg:m-0">Hola! Soy 
                     <TypeAnimation
                         sequence={[
                             "_Full Stack Web Developer",
@@ -24,9 +24,9 @@ export const Inicio = () => {
             </div>
             
             <div>
-                <div className="flex flex-col py-7 gap-3">
+                <div className="flex md:flex-col flex-row py-7 gap-3">
                     <a href="#contact" 
-                        className="bg-primary border-white text-md border text-center text-white py-1 rounded-lg hover:bg-white hover:border-primary hover:border-2 hover:text-primary">
+                        className="bg-primary px-4 md:px-0 border-white text-md border text-center text-white py-1 rounded-lg hover:bg-white hover:border-primary hover:border-2 hover:text-primary">
                         Contactame!
                     </a>
                     <a href="/CV_Leandra_Carolina_Ríos_Full_Stack_Web_Developer.pdf" 

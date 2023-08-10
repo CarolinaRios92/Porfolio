@@ -32,7 +32,7 @@ export const CardProject = ({project}) => {
 
             </div>
              <p className="py-3 text-lg font-medium pb-5 text-center">{`// Herramientas y tecnologias utilizadas:`}</p>
-            <ul className="grid grid-cols-6 gap-3">
+            <ul className="grid md:grid-cols-6 grid-cols-4 gap-3">
                         {technologies.length > 0 && 
                             (technologies.map((technologie, index) => (
                                 <div key={index} className="flex flex-col justify-center items-center">

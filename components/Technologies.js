@@ -2,9 +2,9 @@ import { TecnologiesLogotype } from "@/data/dataProjects"
 
 export const Technologies = () => {
     return (
-        <div id="technologies" className="w-3/5 m-auto">
+        <div id="technologies" className="md:w-3/5 w-4/5 m-auto">
             <h3 className="text-3xl font-medium pb-2">{`// Tecnologias`}</h3>
-            <ul className="grid grid-cols-6">
+            <ul className="grid md:grid-cols-6 grid-cols-4">
                 <li className="flex flex-col items-center py-3">
                     <img src={TecnologiesLogotype.JavaScript} alt="JavaScript" className="w-16"/>
                     <p className="pt-2">JavaScript</p>
@@ -63,7 +63,7 @@ export const Technologies = () => {
                 </li>
                 <li className="flex flex-col items-center py-3">
                     <img src={TecnologiesLogotype.Styled_Components} alt="Styled Components" className="w-16"/>
-                    <p className="pt-2">Styled Components</p>
+                    <p className="pt-2 text-center">Styled Components</p>
                 </li>
                 <li className="flex flex-col items-center py-3">
                     <img src={TecnologiesLogotype.AWS_S3} alt="AWS S3" className="w-16"/>
