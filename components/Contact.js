@@ -63,7 +63,7 @@ export const Contact = () => {
     }
 
     return (
-        <div id="contact" className="w-3/5 m-auto mt-10 bg-third p-7">
+        <div id="contact" className="w-3/5 m-auto my-10 bg-third p-7 ">
             <h3 className="text-3xl font-medium pb-2">_Contáctame</h3>
             <form 
                 className="flex flex-col"

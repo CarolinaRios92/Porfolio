@@ -41,7 +41,7 @@ export default function Projects(){
                             )}
                         </Tabs>
                         </div>  
-                    <ul className="flex gap-4 justify-around pt-3">
+                    {/*<ul className="flex gap-4 justify-around pt-3">
                         {actualProjects?.map(project => (
                             <li key={project.id}>
                                 <button 
@@ -51,11 +51,11 @@ export default function Projects(){
                                 </button>
                             </li>
                         ))}
-                    </ul>
+                        </ul>
 
                     <div className="grid grid-cols-1 gap-7">
                         <CardProject project={project} />
-                    </div>
+                    </div>*/}
                 </div>
             </div>
             
