@@ -37,7 +37,7 @@ export const actualProjects = [
         },
         {
             id: 2,
-            title: "Panel de Administrador E-commerce Malaika",
+            title: "Admin E-commerce Malaika",
             description: "Panel de Administrador que le permite la carga de productos al e-commerce Malaika",
             images: [
                 "/images/Admin/1.png",

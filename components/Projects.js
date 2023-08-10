@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { actualProjects} from "@/data/dataProjects"
 import { CardProject } from "./CardProject"
+import { Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 
-
-export const Projects = () => {
+export default function Projects(){
     const [titleActualProject, setTitleActualProject] = useState(actualProjects[0].title);
-
+    console.log(titleActualProject)
 
     const project = actualProjects.find(project => project.title === titleActualProject);
     const handleChangeProject = (title) => {
@@ -26,7 +26,21 @@ export const Projects = () => {
                     <h3 id="projects" className="text-3xl font-medium pb-3 text-white">
                         _Proyectos
                     </h3>
-
+                    <div className="flex w-full flex-col">
+                        <Tabs aria-label="Dynamic tabs" color="primary" items={actualProjects}>
+                            {(item) => (
+                            <Tab 
+                                key={item.id} 
+                                title={item.title}>
+                                <Card>
+                                <CardBody>
+                                    <CardProject project={item} />
+                                </CardBody>
+                                </Card>  
+                            </Tab>
+                            )}
+                        </Tabs>
+                        </div>  
                     <ul className="flex gap-4 justify-around pt-3">
                         {actualProjects?.map(project => (
                             <li key={project.id}>

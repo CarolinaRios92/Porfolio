@@ -51,8 +51,8 @@ export const CardProject = ({project}) => {
                 
             </div>
             <div className="flex gap-5 py-4 justify-center">
-                <a href={repositorie} className="bg-secondary py-1 px-2 text-center rounded-lg hover:scale-110">Link al Repositorio</a>
-                <a href={deploy} className="bg-secondary py-1 px-2 text-center rounded-lg hover:scale-110">Link al Deploy</a>
+                <a href={repositorie} className="bg-primary text-white py-1 px-2 text-center rounded-lg hover:scale-110">Link al Repositorio</a>
+                <a href={deploy} className="bg-primary text-white py-1 px-2 text-center rounded-lg hover:scale-110">Link al Deploy</a>
             </div>                  
         </div>
     )
