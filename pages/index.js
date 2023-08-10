@@ -5,7 +5,7 @@ import {Inicio} from "@/components/Inicio";
 import { Contact } from "@/components/Contact";
 import {Technologies} from "@/components/Technologies";
 
-const Home = () => {
+const index = () => {
   return (
     <Layout>
         <Inicio />
@@ -17,4 +17,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default index;

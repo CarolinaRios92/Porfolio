@@ -43,7 +43,7 @@ export const CardProject = ({project}) => {
                     </ul>
             <div className="pl-5">
                 <p className="text-lg font-medium pt-5 pb-2">_Funcionalidades:</p>
-                <ul className="list-image-[url(/images/Logos/aceptar.png)]">
+                <ul className="list-image-[url(/images/Icons/comprobado.png)]">
                     {fixtures?.map((fixtur, index) => (
                         <li className="py-1" key={index}>{fixtur}</li>
                     ))}
@@ -52,7 +52,7 @@ export const CardProject = ({project}) => {
             </div>
             <div className="flex gap-5 py-4 justify-center">
                 <a href={repositorie} className="bg-secondary py-1 px-2 text-center rounded-lg hover:scale-110">Link al Repositorio</a>
-                <a href={deploy} className="bg-[#FFCDB2] py-1 px-2 text-center rounded-lg hover:scale-110">Link al Deploy</a>
+                <a href={deploy} className="bg-secondary py-1 px-2 text-center rounded-lg hover:scale-110">Link al Deploy</a>
             </div>                  
         </div>
     )
