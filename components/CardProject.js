@@ -20,6 +20,8 @@ export const CardProject = ({project}) => {
         setIndexActiveImage(indexActiveImage + 1)
     }
 
+    console.log(indexActiveImage);
+
     return (
         <div className="flex gap-3 flex-col bg-white px-1 rounded-lg py-5">
             <p className="text-2xl font-medium px-5">{`// ${title}`}</p>
@@ -79,7 +81,11 @@ export const CardProject = ({project}) => {
             </div>
             <div className="flex gap-5 py-4 justify-center px-5">
                 <a href={repositorie} className="bg-primary text-white py-1 px-2 text-center rounded-lg hover:scale-110">Link al Repositorio</a>
-                <a href={deploy} className="bg-primary text-white py-1 px-2 text-center rounded-lg hover:scale-110">Link al Deploy</a>
+                {deploy && (
+                    <a href={deploy} className="bg-primary text-white py-1 px-2 text-center rounded-lg hover:scale-110">
+                        Link al Deploy
+                    </a>
+                )}
             </div>                  
         </div>
     )
