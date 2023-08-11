@@ -13,3 +13,7 @@
     font-weight: 600;
     font-size: large;
 }
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
