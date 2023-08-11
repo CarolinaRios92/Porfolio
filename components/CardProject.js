@@ -21,7 +21,7 @@ export const CardProject = ({project}) => {
     }
 
     return (
-        <div className="flex gap-3 flex-col border-white border-2 py-5">
+        <div className="flex gap-3 flex-col bg-white px-1 rounded-lg py-5">
             <p className="text-2xl font-medium px-5">{`// ${title}`}</p>
             <p className="px-5">{description}</p>
             <div className="flex gap-5">
@@ -59,13 +59,13 @@ export const CardProject = ({project}) => {
                 </div>
 
             </div>
-             <p className="py-3 text-lg font-medium pb-5 text-center px-5">{`// Herramientas y tecnologias utilizadas:`}</p>
-            <ul className="grid md:grid-cols-6 grid-cols-4 gap-3 px-5">
+             <p className="py-3 text-lg font-medium pb-5 text-center px-0 lg:px-5">{`// Herramientas y tecnologias utilizadas:`}</p>
+            <ul className="grid lg:grid-cols-6 grid-cols-4 gap-3 lg:px-5 px-1">
                         {technologies.length > 0 && 
                             (technologies.map((technologie, index) => (
                                 <div key={index} className="flex flex-col justify-center items-center">
-                                    <img src={TecnologiesLogotype[technologie]} className="w-10"/>
-                                    <li className="w-28 text-center">{technologie}</li>
+                                    <img src={TecnologiesLogotype[technologie]} className="w-10 md:w-14"/>
+                                    <li className="text-xs md:text-base w-28 text-center">{technologie}</li>
                                 </div>
                         )))}
                     </ul>

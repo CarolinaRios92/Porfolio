@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { actualProjects} from "@/data/dataProjects"
 import { CardProject } from "./CardProject"
-import { Tabs, Tab, Card, CardBody} from "@nextui-org/react";
+import { Tabs, Tab, Card, CardBody, Button} from "@nextui-org/react";
 
 export default function Projects(){
     const [titleActualProject, setTitleActualProject] = useState(actualProjects[0].title);
@@ -20,12 +20,12 @@ export default function Projects(){
                 </path>
             </svg>
 
-            <div className="bg-primary mt-0 pt-0 border-none"> 
+            <div className="bg-primary mt-0 pt-0 border-0"> 
                 <div className="lg:w-4/6 w-5/6 m-auto pt-10">
                     <h3 id="projects" className="text-3xl font-medium pb-3 text-white">
                         _Proyectos
                     </h3>
-                    <div className="flex w-full flex-col">
+                    <div className="flex w-full flex-col hidden md:block">
                         <Tabs aria-label="Dynamic tabs" color="primary" items={actualProjects}>
                             {(item) => (
                             <Tab 
@@ -39,22 +39,26 @@ export default function Projects(){
                             </Tab>
                             )}
                         </Tabs>
-                        </div>  
-                    {/*<ul className="flex gap-4 justify-around pt-3">
-                        {actualProjects?.map(project => (
-                            <li key={project.id}>
-                                <button 
-                                    onClick={() => handleChangeProject(project.title)}
-                                    className={"border-white border-2 border-b-0 py-1 px-2 rounded-t-lg text-white " + (titleActualProject === project.title && "selected")}>
-                                        {project.title}
-                                </button>
-                            </li>
-                        ))}
-                        </ul>
+                    </div>
 
-                    <div className="grid grid-cols-1 gap-7">
-                        <CardProject project={project} />
-                    </div>*/}
+                    <div className="md:hidden block">
+                        <ul className="grid grid-cols-2 pb-2 gap-2 justify-around pt-3">
+                            {actualProjects?.map(project => (
+                                <li key={project.id}>
+                                    <Button 
+                                        onClick={() => handleChangeProject(project.title)}
+                                        className={titleActualProject === project.title && "selected"}>
+                                            {project.title}
+                                    </Button>
+                                </li>
+                            ))}
+                            </ul>
+
+                        <div className="grid grid-cols-1 gap-7">
+                            <CardProject project={project} />
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
