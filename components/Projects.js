@@ -1,17 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { actualProjects} from "@/data/dataProjects"
 import { CardProject } from "./CardProject"
-import { Tabs, Tab, Card, CardBody, Button} from "@nextui-org/react";
+import { Tabs, Tab, Card, CardBody, Button, ButtonGroup, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
+import { ChevronDownIcon } from "./ChevronDownIcon";
 
 export default function Projects(){
     const [titleActualProject, setTitleActualProject] = useState(actualProjects[0].title);
-    console.log(titleActualProject)
 
-    const project = actualProjects.find(project => project.title === titleActualProject);
-    const handleChangeProject = (title) => {
-        setTitleActualProject(title)
+    let selectedOptionValue = Array.from(titleActualProject).join("");
 
-    }
+    const project = actualProjects.find(project => project.title === selectedOptionValue)
+    
     return (
         <section className="pt-0 mt-0">
             
@@ -42,21 +41,34 @@ export default function Projects(){
                     </div>
 
                     <div className="md:hidden block">
-                        <ul className="grid grid-cols-2 pb-2 gap-2 justify-around pt-3">
-                            {actualProjects?.map(project => (
-                                <li key={project.id}>
-                                    <Button 
-                                        onClick={() => handleChangeProject(project.title)}
-                                        className={titleActualProject === project.title && "selected"}>
-                                            {project.title}
-                                    </Button>
-                                </li>
-                            ))}
-                            </ul>
+                            <ButtonGroup variant="flat">
+                                <Button>{titleActualProject}</Button>
+                                <Dropdown placement="bottom-end">
+                                    <DropdownTrigger>
+                                        <Button isIconOnly>
+                                            <ChevronDownIcon />
+                                        </Button>
+                                    </DropdownTrigger>
+                                    <DropdownMenu
+                                        disallowEmptySelection
+                                        aria-label="E-commerce options"
+                                        selectedKeys={titleActualProject}
+                                        selectionMode="single"
+                                        onSelectionChange={setTitleActualProject}
+                                        className="max-w-[300px]"
+                                        >
+                                            {actualProjects?.map(project => (
+                                                <DropdownItem key={project.title}>
+                                                    {project.title}
+                                                </DropdownItem>
+                                ))}
+                                    </DropdownMenu>
+                                </Dropdown>
+                            </ButtonGroup>
 
-                        <div className="grid grid-cols-1 gap-7">
+                        <div className="pt-3">
                             <CardProject project={project} />
-                        </div>
+                                            </div>
                     </div>
                     
                 </div>

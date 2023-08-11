@@ -20,8 +20,6 @@ export const CardProject = ({project}) => {
         setIndexActiveImage(indexActiveImage + 1)
     }
 
-    console.log(indexActiveImage);
-
     return (
         <div className="flex gap-3 flex-col bg-white px-1 rounded-lg py-5">
             <p className="text-2xl font-medium px-5">{`// ${title}`}</p>
