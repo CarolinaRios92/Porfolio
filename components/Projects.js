@@ -12,7 +12,6 @@ export default function Projects(){
         setTitleActualProject(title)
 
     }
-    console.log(project)
     return (
         <section className="pt-0 mt-0">
             
